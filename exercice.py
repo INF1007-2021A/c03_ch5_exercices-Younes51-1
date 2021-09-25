@@ -6,30 +6,70 @@ from typing import List
 
 
 def convert_to_absolute(number: float) -> float:
-    return 0
-
+    if number < 0 :
+        number *= -1
+    return number
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
-
-    return [""]
+    Liste=""
+    for caractère in prefixes :
+        Liste += caractère + suffixe + ","
+    return Liste
 
 
 def prime_integer_summation() -> int:
-    return 0
+    number=1
+    i=0
+    somme=0
+    count=0
+    while count <100 :
+        Prime=True
+        number+=1
+        for i in range(2,number-1):
+            if number % i == 0:
+                Prime= False
+        if Prime==True:
+            somme +=number
+            count +=1
+    return somme
 
 
 def factorial(number: int) -> int:
-    return 0
+    factoriale=number
+    if number==0 :
+        factoriale=1
+    else :
+        for i in range (number-1,1,-1) :
+            factoriale *= i
+    return factoriale
 
 
 def use_continue() -> None:
-    pass
+    affichage=""
+    for i in range (1,11) :
+     if i!=5 :
+        affichage += str(i)+ ","
+    return affichage 
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
-    return []
-
+    groups_acceptes =[False for _ in range(len(groups))]
+    for i in range(len(groups)):
+        Acceptance = True
+        if len(groups[i]) > 10 or len(groups[i]) <= 3 :
+            Acceptance = False
+        else:
+            for j in range(len(groups[i])):
+                if groups[i][j] == 25:
+                    Acceptance = True
+                elif groups[i][j] == 50 or groups[i][j] > 70:
+                    Acceptance = False
+                elif groups[i][j] < 18:
+                    Acceptance = False
+        if Acceptance == True:
+            groups_acceptes[i] = True
+    return groups_acceptes
 
 def main() -> None:
     number = -4.325
@@ -42,8 +82,7 @@ def main() -> None:
     number = 10
     print(f"La factiorelle du nombre {number} est: {factorial(number)}")
     
-    print(f"L'affichage de la boucle est:")
-    use_continue()
+    print(f"L'affichage de la boucle est: {use_continue()} ")
 
     groups = [
         [15, 28, 65, 70, 72], [18, 24, 22, 50, 70], [25, 2],
