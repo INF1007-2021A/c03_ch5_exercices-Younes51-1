@@ -14,7 +14,7 @@ def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
     Liste=""
     for caractère in prefixes :
-        Liste += caractère + suffixe + ","
+        Liste += caractère + suffixe + ", "
     return Liste
 
 
@@ -49,7 +49,7 @@ def use_continue() -> None:
     affichage=""
     for i in range (1,11) :
      if i!=5 :
-        affichage += str(i)+ ","
+        affichage += str(i)+ ", "
     return affichage 
 
 
@@ -63,6 +63,7 @@ def verify_ages(groups: List[List[int]]) -> List[bool]:
             for j in range(len(groups[i])):
                 if groups[i][j] == 25:
                     Acceptance = True
+                    break
                 elif groups[i][j] == 50 or groups[i][j] > 70:
                     Acceptance = False
                 elif groups[i][j] < 18:
