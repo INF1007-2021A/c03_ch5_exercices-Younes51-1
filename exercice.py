@@ -12,9 +12,9 @@ def convert_to_absolute(number: float) -> float:
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
-    Liste=""
+    Liste=[]
     for caractère in prefixes :
-        Liste += caractère + suffixe + ", "
+        Liste.append(caractère + suffixe)
     return Liste
 
 

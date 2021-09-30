@@ -1,33 +1,10 @@
 test_absolute (__main__.TestExercice) ... ok
 test_factorial (__main__.TestExercice) ... ok
-test_prefixes (__main__.TestExercice) ... FAIL
+test_prefixes (__main__.TestExercice) ... ok
 test_summation (__main__.TestExercice) ... ok
-test_verify_ages (__main__.TestExercice) ... FAIL
-
-======================================================================
-FAIL: test_prefixes (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\youne\Documents\GitHub\c03_ch5_exercices-Younes51-1\test_exercice.py", line 29, in test_prefixes
-    self.assertListEqual(
-AssertionError: First sequence is not a list: 'Jack,Kack,Lack,Mack,Nack,Oack,Pack,Qack,'
-
-======================================================================
-FAIL: test_verify_ages (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\youne\Documents\GitHub\c03_ch5_exercices-Younes51-1\test_exercice.py", line 74, in test_verify_ages
-    self.assertListEqual(
-AssertionError: Lists differ: [False, False, False, False, False, True, False, False, False] != [False, True, False, False, True, True, True, True, False]
-
-First differing element 1:
-False
-True
-
-- [False, False, False, False, False, True, False, False, False]
-+ [False, True, False, False, True, True, True, True, False] : Mauvaise réponse
+test_verify_ages (__main__.TestExercice) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.008s
+Ran 5 tests in 0.009s
 
-FAILED (failures=2)
+OK
